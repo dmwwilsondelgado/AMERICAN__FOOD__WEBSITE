@@ -1,57 +1,519 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-/* Tipo de Letra para empezar  */
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
-/* font-family: "Bebas Neue", sans-serif; */
 
 
-@import url(Css/promotion.css);
-@import url(Css/Variables.css);
-@import url(Css/layaout.css);
-@import url(Css/burguer.css);
-/* @import url(Css/reservation.css); */
-@import url(Css/reservationA.css);
-@import url(Css/events.css);
-@import url(Css/info.css);
+/* Importación de otros archivos CSS */
+@import url(Css/promotion.css); /* Importa el estilo de promociones */
+@import url(Css/Variables.css); /* Importa variables CSS */
+@import url(Css/layaout.css); /* Importa el diseño general de la página */
+@import url(Css/burguer.css); /* Estilos específicos para hamburguesas */
+@import url(Css/reservationA.css); /* Estilos para la sección de reservas */
+@import url(Css/events.css); /* Estilos para eventos */
+@import url(Css/info.css); /* Estilos para la información */
 
-
-
-.dm-serif-text-regular {
-    font-family: "DM Serif Text", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-  
-.dm-serif-text-regular-italic {
-    font-family: "DM Serif Text", serif;
-    font-weight: 400;
-    font-style: italic;
-}
-.passion-one-black {
-  font-family: "Passion One", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-
-
-
+/* Reajusta los márgenes y rellenos de todos los elementos */
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Asegura que los elementos se dimensionen según su caja de contenido */
 }
 
-
+/* Estilos para el cuerpo de la página */
 body{
-    background-color: var(--nada);
+    background-color: var(--nada); /* Utiliza la variable CSS --nada para el color de fondo */
 }
+
+/* Estilo para el contenedor principal de contenido */
 .content{
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    display: flex; /* Aplica el modelo de caja flexible (flexbox) */
+    overflow-x: hidden; /* Desactiva el desplazamiento horizontal */
+    overflow-y: hidden; /* Desactiva el desplazamiento vertical */
+    flex-direction: column; /* Organiza los elementos en una columna */
+}
+
+
+
+@media (max-width: 768px) {
+    .header__container {
+     flex-direction: column;
+     align-items: flex-start;
+     
+    }
+    .header__left {
+     margin-bottom: 10px;
+    }
+  
+    .promo {
+     grid-template-columns: 1fr;
+     text-align: start;
+     align-items: flex-start;
+     margin: 0;
+    }
+    .header__nav-list{
+      display: inline-block;
+  
+    }
+  
+    .promo__title-main {
+      font-size: 5rem;
+    }
+  
+    .promo__title-week {
+      font-size: 3rem;
+      align-items: center;
+    }
+  
+    .circle {
+      height: 100px;
+      width: 100px;
+    }
+  
+    .circle__rayas {
+      height: 80px;
+      width: 80px;
+    }
+  
+    .promo__price-text {
+      font-size: 2rem;
+    }
+  
+    .promo__price-text2 {
+      font-size: 1rem;
+    }
+  
+    .promo__price-subtext {
+     font-size: 1.2rem;
+    }
+  
+    .promo_publicidad-imgBurguer {
+      flex-direction: column;
+      align-items: center;
+    }
+    .promotion__container {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      width: 100%;
+    }
+    
+    .promotion__item {
+     margin-bottom: 20px;
+     width: 100%;
+     left: 0;
+    }
+    
+    .promotion__item--large {
+     grid-row: initial;
+     left: 0;
+     width: 100%;
+    }
+    
+    .promotion__image {
+      width: 100%;
+      height: auto;
+      }
+    
+    .promotion__image--grande {
+      width: 100%;
+      height: auto;
+    }
+    
+    .textos__content {
+      position: static;
+      font-size: 1rem;
+      text-align: center;
+      padding: 10px 0;
+      color: black;
+      top: auto;
+      bottom: auto;
+      left: auto;
+    }
+    .promotion__title {
+      font-size: 1.2rem;
+    }
+    .promotion__subtitle {
+      font-size: 1.5rem;
+    }
+    
+    .contenedor__texto {
+      width: 90%;
+      margin-top: 20px;
+    } 
+    .boton__amarillo {
+      width: 80%;
+      padding: 10px;
+    }
+    
+    .texto__titulo {
+      font-size: 2rem;
+    }  
+    .texto__parrafo {
+      margin-bottom: 20px;
+    }
+    .burguerCard {
+      grid-template-columns: 1fr;
+    }
+    
+    .card-hamburguesa__imagen {
+      margin-left: 65px;
+      max-width: 250px;
+      max-height: 200px;
+      }
+  }
+  
+@media (max-width: 480px) {
+    .header__container {
+        padding: 10px;
+    }
+  
+    .promo__title-main {
+        font-size: 4rem;
+    }
+  
+    .promo__title-week {
+      font-size: 2rem;
+      justify-content: center;
+      align-items: center;
+    }
+    .circle {
+      height: 80px;
+      width: 80px;
+      right: -150px;
+      top: -100px;
+    }
+    .circle__rayas {
+      height: 60px;
+      width: 60px;
+    }
+  
+    .promo__price-text {
+        font-size: 1.5rem;
+    }
+  
+    .promo__price-text2 {
+      font-size: 0.15rem;
+    }
+  
+    .promo__price-subtext {
+      font-size: 1rem;
+      align-items: center;
+      margin-top: -10px;
+      padding: 10px;
+    }
+  
+    .promo_publicidad-imgBurguer {
+      align-items: start;
+      width: 100px;
+    }
+    .promo__publicidadBurguer {
+      width: 150px;
+      right: 10px;
+      left: 20px;
+      margin-right: 10%;
+      margin-top: -200%;
+    }
+  
+    .promo__publicidadCola {
+      margin-left: 50px;
+      margin-top: -300%;
+      width: 75px;
+      right: 120px;
+      align-items: center;
+  
+    }
+    .promo__publicidadPapitas {
+      width: 92px;
+      left: -30px;
+      margin-top: -210px;
+    }
+    .promotion__container {
+      padding: 10px;
+    }
+    .textos__content {
+      font-size: 0.9rem;
+    }
+    
+    .promotion__title {
+      font-size: 1rem;
+    }
+    
+    .promotion__subtitle {
+       font-size: 1.2rem;
+    }
+    
+    .boton__amarillo {
+     width: 100%;
+     padding: 8px;
+    }
+    
+    .texto__titulo {
+     font-size: 1.5rem;
+    }
+    
+    .texto__parrafo {
+     margin-bottom: 10px;
+    }
+  }
+
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .reservation {
+      flex-direction: column;
+      min-height: auto;
+    }
+  
+    .reservation-image__bottle {
+      width: 50px;
+      right: 0;
+      margin-right: 10px;
+      margin-top: -20px;
+    }
+  
+    .reservation-image__burguerplano {
+      width: 180px;
+      margin-right: 0;
+      margin-top: -400px;
+    }
+  
+    .reservation-image__burguerPapitas {
+      width: 400px;
+      margin-left: 0;
+      margin-top: 200px;
+    }
+  
+    .reservation__form {
+      grid-template-columns: 1fr; /* El formulario será de una sola columna */
+      max-width: 90%;
+    }
+  
+    .reservation__title {
+      font-size: 1.5rem; /* Reducir tamaño del título */
+      margin-bottom: 30px;
+    }
+  
+    .reservation__subtitle {
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+  }
+  
+  /* Para móviles (pantallas pequeñas) */
+  @media (max-width: 767px) {
+    .reservation {
+      flex-direction: column;
+      min-height: auto;
+      padding: 20px;
+    }
+  
+    .reservation-image__bottle {
+      width: 40px;
+      margin-right: -255px;
+      margin-top: -10px;
+    }
+  
+    .reservation-image__burguerplano {
+      width: 150px;
+      margin-right: 0;
+      margin-top: -300px;
+      display: none;
+    }
+  
+    .reservation-image__burguerPapitas {
+      width: 350px;
+      margin-left: 0;
+      margin-top: 100px;
+      display: none;
+    }
+  
+    .reservation__form {
+      grid-template-columns: 1fr; /* El formulario será de una sola columna */
+      max-width: 100%;
+    }
+  
+    .reservation__title {
+      font-size: 1.2rem; /* Reducir más el tamaño del título */
+      margin-bottom: 20px;
+    }
+  
+    .reservation__subtitle {
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+  
+    .reservation__input {
+      padding: 8px;
+      font-size: 0.9rem;
+    }
+  
+    .reservation__input--color-red {
+      padding: 8px 0;
+      font-size: 0.9rem;
+    }
+  }
+
+
+@media (min-width: 1024px) {
+ .image__burger {
+  width: 700px;
+ }
+}
+  
+
+@media (max-width: 1023px) and (min-width: 768px) {
+.image__burger {
+  width: 80%; 
+  max-width: 600px;
+ }
+}
+
+
+@media (max-width: 767px) {
+    .image__burger {
+      width: 90%; 
+      max-width: 500px;
+    }
+  
+    .subcontent__events {
+      flex-direction: column; 
+      margin: 20px;
+    }
+  
+    .events__texto {
+      margin: 20px 0;
+    }
+  
+    .titulo__texto, .subtitulo__texto {
+      text-align: center; 
+      font-size: 24px; 
+    }
+  
+    .parrafo__texto {
+      font-size: 16px; 
+    }
+ }
+  
+@media (max-width: 1023px) and (min-width: 768px) {
+    .info__hamburguer {
+      flex-direction: column;
+      justify-content: flex-start;
+      height: auto;
+      padding: 40px 20px;
+    }
+  
+    .content__info {
+      max-width: 90%;
+      margin: 20px 0;
+    }
+  
+    .info__parrafo {
+      font-size: 1.2em;
+      text-align: center;
+    }
+  
+    .text__info {
+      margin-bottom: 40px;
+      display: block;
+    }
+  
+    .foto__burger {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  
+    .imagen__logo {
+      width: 300px;
+      height: auto;
+    }
+  
+    .contact__info {
+      position: relative;
+      margin-left: 0;
+      margin-top: 20px;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  
+    .social-icons {
+      margin-top: 50px;
+      font-size: 1.5em;
+      position: relative;
+      margin-right: 0;
+      gap: 20px;
+      justify-content: center;
+    }
+  
+    footer {
+      margin-top: 20px;
+      font-size: 1em;
+      text-align: center;
+    }
+  }
+  
+  /* Para móviles (pantallas pequeñas) */
+@media (max-width: 767px) {
+    .info{
+      background-color: var(--PAGE__1);
+    }
+    .foto__burger{
+      color: black;
+      border-radius: 20px;
+    }
+    .info__hamburguer {
+      flex-direction: column;
+      justify-content: center;
+      height: auto;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  
+    .content__info {
+      max-width: 100%;
+      text-align: center;
+      border-radius: 10px;
+    }
+  
+    .info__parrafo {
+      font-size: 1.1em;
+      margin-top: 20px;
+    }
+  
+    .text__info {
+      margin-bottom: 30px;
+      display: block;
+    }
+  
+    .foto__burger {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  
+    .imagen__logo {
+      width: 250px;
+      height: auto;
+    }
+  
+    .contact__info {
+      position: relative;
+      margin-left: 0;
+      margin-top: 20px;
+      font-size: 1.3rem;
+      text-align: center;
+    }
+    .social-icons {
+      margin-top: 250px;
+      margin-right: 25px;
+      font-size: 1.4em;
+      justify-content: center;
+    }
+  
+    footer {
+      margin-top: 150px;
+      font-size: 0.9em;
+      text-align: center;
+    }
 }
